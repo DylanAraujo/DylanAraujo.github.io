@@ -4,7 +4,7 @@ function feedbackFormValidate()
     var firstName = contactFormObj.firstname.value;
     var lastName = contactFormObj.lastname.value;
     var email = contactFormObj.email.value;
-    var improvement = contactFormObj.improvement.value;
+    var improvement = contactFormObj.improvement;
     var everythingOK = true;
 
     if (!validateName(firstName))
@@ -24,6 +24,9 @@ function feedbackFormValidate()
         alert("Error: Invalid e-mail address.");
         everythingOK = false;
     }
+
+    var currentLength = improvement.value.length;
+    alert("You typed " + currentLength + " characters in the improvement box!");
     
     if (everythingOK)
     {
