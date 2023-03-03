@@ -1,0 +1,86 @@
+<!-- biography.html -->
+<!--#include virtual="../document_head.html"-->
+<!--#include virtual="header.html"-->
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+    </head>
+
+<h1 style="border-radius: 5px; padding:5px;">  Welcome to my Biography Page!</h1>
+<p style="font-size: larger; font-style: italic;">Information Subject to Change Because I'm always having new experiences!</p>
+
+<p class="BlueOnGreenSerif" style="border-radius: 10px;">
+    This is just a little bit about me! My name is Dylan Araujo. I am a student at the
+    University of Nebraska Studying computer science. Im really enjoying my 464 class because
+    it is the first form of formal education I have had as far as web development goes. More than
+    anything, I think it is cool how HTML was designed for many different functions to take place.
+    <em>There are so many ways to use HTML</em>, and this allows for many frameworks across multiple languages
+    to be available to the public. Though it was developed a long time ago, <b>I dont think HTML is ever going away!</b>
+</p>
+
+<div class="nicediv">
+    <h2>To start, my favorite activities!</h2>
+</div>
+<div class="flexcontainer1 nicediv">
+    <div class="flexchild">
+        <h3>Gaming</h3>
+        <img src="../images/gaming.jpg" width="256" height="256">
+    </div>
+    <div class="flexchild">
+        <h3>Hanging Out With Friends</h3>
+        <img src="../images/friends.jpg" width="256" height="256">
+    </div>
+    <div class="flexchild">
+        <h3>Coding</h3>
+        <img src="../images/coding.jpg" width="256" height="256">
+    </div>
+</div>
+
+<div class="nicediv">
+    <h4>Here are some of my favorite foods!</h4>
+    <ul>
+        <li>Icecream</li>
+        <li>Mac and Cheese</li>
+        <li>Pizza</li>
+        <li>Chicken Nuggets</li>
+    </ul>
+</div>
+
+<div class="nicediv">
+    <div class="fulldiv">
+        <h2>Here is one of my favorte videos!</h2>
+    </div>
+    <div class="fulldiv" style="height:500px;">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/5_sfnQDr1-o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+</div>
+
+<div id="DylanSpecialId">
+    This page is till a work in progress! I still have so many experiences left to have!
+</div>
+
+<form class="nicediv">
+    <label for="firstname">First name:</label>
+    <input style="width:80%" type="text" id="firstname" name="firstname"><br>
+    <br>
+    <label for="lastname">Last night:</label>
+    <input style="width:80%" type="text" id="lastname" name="lastname"><br>
+    <br>
+    <label for="improvement">Improvements I could make for this page:</label>
+    <input style="width:80%; height:50px;" type="text" id="improvement" name="improvement"><br>
+    <p>Select your favorite Language</p>
+    <input type="radio" name="fav_language" value="HTML">
+    <label >HTML</label><br>
+    <input type="radio" name="fav_language" value="CSS">
+    <label >CSS</label><br>
+    <input type="radio" name="fav_language" value="JAVA">
+    <label >JAVA</label><br>
+    <input type="radio" name="fav_language" value="F#">
+    <label >F#</label><br>
+    <input type="submit" value="Submit Form">
+    <input type="reset">
+</form>
+
+</html>

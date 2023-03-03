@@ -1,0 +1,53 @@
+<!-- quiz2.html -->
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/quiz2.css">
+    </head>
+
+<h1>This is Quiz 2! This H1 was styled using CSS!</h1>
+<p style="font-size: larger; font-style: italic;"> This paragraph block has a different font and font size, and was customized inline!</p>
+<h2>Below is a list of my favorite foods!</h2>
+<ul>
+    <li>Icecream</li>
+    <li>Mac and Cheese</li>
+    <li>Pizza</li>
+    <li>Chicken Nuggets</li>
+</ul>
+
+<p class="BlueOnGreenSerif">
+    This paragraph is using a class selector!
+</p>
+
+<h2 class="BlueOnGreenSerif">This h2 is using the same class selector!!</h2>
+
+<div id="DylanSpecialId">
+    This div is the only thing that can use this because it has the "special id" to select the css!
+</div>
+
+<div style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+    <p>This paragraph is inheriting its font from its parent div!</p>
+</div>
+
+<h1 style="color:blueviolet">This is the second h1 we are using, we are using "cascading" to override the color!</h1>
+
+<form>
+    <label for="firstname">First name:</label>
+    <input type="text" id="firstname" name="firstname"><br>
+    <label for="lastname">Last night:</label>
+    <input type="text" id="lastname" name="lastname"><br>
+    <p>Select your favorite Language</p>
+    <input type="radio" name="fav_language" value="HTML">
+    <label >HTML</label><br>
+    <input type="radio" name="fav_language" value="CSS">
+    <label >CSS</label><br>
+    <input type="radio" name="fav_language" value="JAVA">
+    <label >JAVA</label><br>
+    <input type="radio" name="fav_language" value="F#">
+    <label >F#</label><br>
+    <input type="submit" value="Submit Form">
+    <input type="reset">
+</form>
+
+</html>

@@ -1,0 +1,52 @@
+body{
+    margin: 10px;
+}
+
+.flex_cont{
+    display: flex;
+}
+
+.nav_border{
+    background-color: #3D5A80;
+    border: 2px solid;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.flex_item{
+    flex:1;
+    align-items: center;
+}
+
+a{
+    color: #EE6C4D;
+    text-decoration: none;
+}
+
+a.hover{
+    text-decoration: underline;
+    color:black;
+}
+
+.nav_item{
+    background-color: #3D5A80;
+    border: 2px solid;
+    padding: 10px;
+    margin: 2px;
+}
+
+.largem{
+    margin:10px;
+}
+
+.large{
+    flex:4;
+}
+
+img{
+    max-width: 100%;
+}
+
+.center_text{
+    text-align: center;
+}

@@ -1,0 +1,49 @@
+<!-- feedback.html -->
+<!--#include virtual="../document_head.html"-->
+<!--#include virtual="header.html"-->
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/feedback.js"></script>
+</head>
+
+<h1 style="border-radius: 5px; padding:5px;">Fill Out my feedback form!</h1>
+<div class="center_text">
+<form style="text-align: left" id="feedback" class="fitdiv" onsubmit="feedbackFormValidate()">
+    <table>
+        <tr>
+                <td><label for="firstname">First name:</label></td>
+                <td><input size=100 style="width:100%" type="text" id="firstname" name="firstname"></td>
+        </tr>
+        <tr>
+                <td><label for="lastname">Last name:</label></td>
+                <td><input style="width:100%" type="text" id="lastname" name="lastname"></td>
+        </tr>
+        <tr>
+                <td><label for="improvement">Feedback: </label></td>
+                <td><textarea form="feedback" style="width:80%; height:50px;" id="improvement" name="improvement"></textarea></td>
+        </tr>
+        <tr>
+            <td><label for="email">Email: </label></td>
+            <td><input style="width:100%;" type="text" id="email" name="email"></input></td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td><p>Rate my Website</p></td>
+            <td><input type="radio" name="fav_language" value="1"></td>
+            <td><label >1</label></td>
+            <td><input type="radio" name="fav_language" value="2"></td>
+            <td><label >2</label></td>
+            <td><input type="radio" name="fav_language" value="3"></td>
+            <td><label >3</label></td>
+            <td><input type="radio" name="fav_language" value="4"></td>
+            <td><label >4</label></td>
+            <td><input type="radio" name="fav_language" value="5"></td>
+            <td><label >5</label></td>
+        </tr>
+    </table>
+    <input type="submit" value="Submit Form">
+    <input type="reset">
+</form>
+</div>
