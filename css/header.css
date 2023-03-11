@@ -1,5 +1,6 @@
 body{
     margin: 10px;
+    background-color: lightblue;
 }
 
 .flex_cont{
@@ -16,6 +17,7 @@ body{
 .flex_item{
     flex:1;
     align-items: center;
+    position: relative;
 }
 
 a{
@@ -50,3 +52,31 @@ img{
 .center_text{
     text-align: center;
 }
+
+.hiddenVis {
+    visibility: hidden;
+    position: absolute;
+    width:100%;
+    top: calc(100% + 2px); /* adjust the distance between the nav_item and dropdown */
+    left: 0;
+    background-color: #3D5A80; /* match the background color of nav_item */
+    padding: 10px;
+    border-radius: 0 0 20px 20px; /* round the bottom corners */
+    overflow: hidden; /* hide any overflow content */
+    z-index: 1;
+    border: 2px solid black;
+  }
+  
+  .hiddenVis a {
+    display: block;
+    color: #EE6C4D;
+    padding: 5px;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .hiddenVis a:hover {
+    background-color: #e8b5a8;
+    color: #ec7a5d;
+    border: 2px solid;
+  }
