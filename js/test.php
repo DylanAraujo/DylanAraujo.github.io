@@ -17,22 +17,22 @@
       
       function sendMessage() {
         event.preventDefault();
-        var messageContent = document.getElementById("message").value;
-        var url = "counter.php?message=" + encodeURIComponent(messageContent);
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
+        var valMessage = document.getElementById("message").value;
+        var url = "counter.php?msg=" + encodeURIComponent(valMessage);
+        var request = new XMLHttpRequest();
+        request.onreadystatechange = function() {
           if (this.readyState == 4 && this.status == 200) {
             updatePage(this.responseText);
           }
         };
-        xhttp.open("GET", url, true);
-        xhttp.send();
+        request.open("GET", url, true);
+        request.send();
       }
       
       function updatePage(response) {
-        var responseArray = response.split(":");
-        var counter = responseArray[0];
-        var message = responseArray[1];
+        var res = response.split(":");
+        var counter = res[0];
+        var message = res[1];
         if (counter > count) {
           count = counter;
           document.getElementById("counter").innerHTML = "Total messages: " + counter;
@@ -44,14 +44,14 @@
       }
       
       function getMessage() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
+        var request = new XMLHttpRequest();
+        request.onreadystatechange = function() {
           if (this.readyState == 4 && this.status == 200) {
             updatePage(this.responseText);
           }
         };
-        xhttp.open("GET", "counter.php", true);
-        xhttp.send();
+        request.open("GET", "counter.php", true);
+        request.send();
       }
       
       getMessage();
