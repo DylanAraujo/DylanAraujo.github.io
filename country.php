@@ -1,5 +1,9 @@
-<!-- index.html for dyl -->
 <!DOCTYPE html>
+<html>
+<head>
+	<title>REST Countries API</title>
+  	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
 <html>
     <head>
         <link rel="stylesheet" href="css/header.css">
@@ -48,23 +52,44 @@
         </div>
     </nav>
 </html>
+<body>
+	<h1>REST Countries API</h1>
+	<form method="GET" class="nicediv">
+		<label for="search">Search for a country:</label>
+		<input type="text" id="search" name="search">
+		<button type="submit" class="orangecurvebutton">Search</button>
+	</form>
 
-    
-<h3>Welcome to Dylan's Website:This is the base page for my website, attatched are the links to all my other fun documents!</h3>
+	<?php
+		if (isset($_GET['search'])) {
+			$search = $_GET['search'];
+			$url = "https://restcountries.com/v2/name/$search";
+			$data = file_get_contents($url);
+			$countries = json_decode($data);
 
-<div class="flex_item nav_item">
-    <a href="">Home</a>
-</div>
-<div class="flex_item nav_item">
-    <a href="biography.html">Biography</a>
-</div>
-<div class="flex_item nav_item">
-    <a href="calculator.html">Calculator</a>
-</div>
-<div class="flex_item nav_item">
-    <a href="feedback.html">Feedback</a>
-</div>
-<div class="flex_item nav_item">
-    <a href="send.html">Send Message</a>
-</div>
+			if (count($countries) > 0) {
+				foreach ($countries as $country) {
+					echo "<div class='flexcontainer1'>";
+					echo "<div class='fulldiv'>";
+					echo "<h2>{$country->name}</h2>";
+					echo "<p>Capital: {$country->capital}</p>";
+					echo "<p>Population: {$country->population}</p>";
+					echo "<p>Region: {$country->region}</p>";
+					echo "<p>Subregion: {$country->subregion}</p>";
+					echo "<p>Language(s): ";
+					foreach ($country->languages as $language) {
+						echo "{$language->name} ";
+					}
+					echo "</p>";
+					echo "<p>Currency: {$country->currencies[0]->name} ({$country->currencies[0]->symbol})</p>";
+					echo "</div>";
+					echo "<img class='fitdiv' src='{$country->flag}' alt='Flag of {$country->name}'>";
+					echo "</div>";
+				}
+			} else {
+				echo "<p>No results found for '$search'.</p>";
+			}
+		}
+	?>
+</body>
 </html>
